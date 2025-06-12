@@ -1,0 +1,41 @@
+{{template "base" .}}
+
+{{define "content"}}
+<div class="container">
+	   
+     <div class="row">
+       <div class="col-md-3"></div>
+       <div class="col-md-6 text-center">
+          
+          <h1 class="mt-5">Search for Availability</h1>
+
+          <form action="/book" method="GET" novalidate class="needs-validation">
+
+            
+            <div class="row">
+              <div class = "col">
+                <div id="reservation-date" class="row">
+
+                  <div class="col">
+                  <!-- <label for="start_date" class="form-label">Starting Date</label> -->
+                  <input required class = "form-control" id="start_date" name="start_date" type="text" name="start" placeholder="Arrival">
+                  </div>
+
+                  <div class="col">
+                  <!-- <label for="end_date" class="form-label">Ending Date</label> -->
+                  <input required type="text" class="form-control" id="end_date" name="end_date" name="end" placeholder="Departure">  
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr>
+          <button type="submit" class="btn btn-primary" id = "submit-button">Submit</button>
+
+        </form>
+       </div>
+     </div>
+
+     
+	</div>
+{{end}}

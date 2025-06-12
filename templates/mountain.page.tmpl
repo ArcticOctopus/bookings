@@ -1,0 +1,47 @@
+{{template "base" .}}
+
+{{define "content"}}
+<div class="container">
+	   <div class="row">
+      <div class="col">
+      <img src="/static/images/mountain-view.jpg" class="img-fluid img-thumbnail mx-auto d-block room-image">
+    </div>
+    </div>
+     <div class="row">
+       <div class="col">
+         <h1 class="text-center mt-4"> Mountain View</h1>
+         <p> You're home away from home. Nestled in the heart of the rockies, you'll can't wait to come back. You're home away from home. Nestled in the heart of the rockies, you'll can't wait to come back. You're home away from home. Nestled in the heart of the rockies, you'll can't wait to come back. You're home away from home. Nestled in the heart of the rockies, you'll can't wait to come back.</p>
+       </div>
+     </div>
+     <div class="row">
+       <div class="col text-center">
+         
+         <a href="#!" id = "check-availability-button" class = "btn btn-success">Check Availability</a>
+       </div>
+     </div>
+{{end}}
+
+{{define "js"}}
+     <script>
+         document.getElementById("check-availability-button").addEventListener("click", function(){
+      let html = `
+                  <form id="check-availability-form" action="" method="post" novalidate class="needs-validation">
+                      <div class="row">
+                        <div class="col">
+                          <div class="row" id="reservation-dates-modal">
+                              <div class="col">
+                                  <input disabled required class="form-control" type="text" id="start" name="start" placeholder="Arrival">
+                              </div>
+                              <div class="col">
+                                  <input disabled required class="form-control" type="text" id="end" name="end" placeholder="Departure">
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                  </form>
+                  `
+      attention.custom({msg: html, title: "Choose your Dates"});
+    });
+
+     </script>
+{{end}}

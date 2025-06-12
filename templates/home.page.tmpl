@@ -1,14 +1,57 @@
 {{template "base" .}}
 
 {{define "content"}}
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h1>This is the home page</h1>
-                        <p>This is some text</p>
-                </div>
+    <div id="main-carousel" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <img src="/static/images/woman-laptop.png" class="d-block w-100" alt="Woman and Laptop">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>This could be you.</h5>
+              <p>Finally able to get some work done.</p>
+              </div>
             </div>
+
+          <div class="carousel-item">
+            <img src="/static/images/tray.png" class="d-block w-100" alt="Tray">
+            <div class="carousel-caption d-none d-md-block">
+               <h5>We have a wide selection of beverages.</h5>
+                <p>Come enjoy our thirty-one different brands of coffee.</p>
+              </div>
+            </div>
+
+          <div class="carousel-item">
+            <img src="/static/images/outside.png" class="d-block w-100" alt="Beautiful Scenery">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Enjoy the lovely views.</h5>
+                <p>Nestled up against the picturesque Shenandohah valley.</p>
+              </div>
+          </div>
         </div>
 
+    </div>
+
+	<div class="container">
+	   
+     <div class="row">
+       <div class="col">
+         <h1 class="text-center mt-4"> Park House Bread and Breakfast</h1>
+         <p> You're home away from home. Nestled in the heart of the rockies, you'll can't wait to come back. You're home away from home. Nestled in the heart of the rockies, you'll can't wait to come back. You're home away from home. Nestled in the heart of the rockies, you'll can't wait to come back. You're home away from home. Nestled in the heart of the rockies, you'll can't wait to come back.</p>
+       </div>
+     </div>
+     <div class="row">
+       <div class="col text-center">
+         
+         <a href="/book" class = "btn btn-success">Book Now</a>
+       </div>
+     </div>
+
+   
+     </div>
+	</div>
 {{end}}
